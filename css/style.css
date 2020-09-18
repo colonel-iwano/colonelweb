@@ -9,6 +9,8 @@ body {
     background: #f2f2f2;
 }
 
+
+
 #main {
     width: 616px;
     margin: 0 auto;
@@ -19,21 +21,29 @@ body {
 
 }
 
+.toptitle {
+    width: 250px;
+    margin-top: 10px;
 
+}
 
 #header {
     width: 100%;
     overflow: hidden;
-    background: #fff;
-    padding: 6px 0px;
+    background: #FF9838;
+
     position: fixed;
     z-index: 2;
-    border-bottom: 5px solid #FF9838;
+    background-image: url(../sozai/headergackgrounding.png);
+
+    height: 66px;
 }
 
 #header h1 {
+    margin-top: 8px;
     float: left;
     color: #1E0D61;
+    margin-left: 100px;
     margin-right: 48px;
     font-family: 'Roboto', sans-serif;
 }
@@ -72,101 +82,280 @@ body {
     float: left;
 }
 
-#content1 .dissolve-animation .caption {
+.dissolve-animation .caption {
+    content: "";
     position: absolute;
-    padding: 20px;
-    background: #FF9838;
-    height: 160px;
-    width: 260px;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 152, 56, 40%);
+    transform: translate3d(-90%, 0%, 0);
+    transition: .3s;
 }
 
-#content1 .dissolve-animation .caption h2 {
+.dissolve-animation .caption h2 {
     color: white;
     font-size: 13px;
+    width: 85%;
+
 }
 
-#content1 .dissolve-animation .caption h3 {
+.dissolve-animation .caption h3 {
     color: white;
     font-size: 15px;
 }
 
-#content1 .dissolve-animation:hover .caption {
-    -webkit-transform: translate(8px, 8px);
-    -ms-transform: translate(8px, 8px);
-    -o-transform: translate(8px, 8px);
-    transform: translate(8px, 8px);
-    opacity: 1;
+.dissolve-animation:hover .caption {
+    transform: translate3d(0, 0, 0);
+}
+
+.dissolve-animation .caption a {
+
+    padding-top: 60px;
+
+}
+
+.dissolve-animation a span {
+    position: absolute;
+    top: 43%;
+    left: 93%;
+    width: 15px;
+    height: 15px;
+    margin-left: -12px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    -webkit-animation: sdb 2s infinite;
+    animation: sdb 2s infinite;
+    box-sizing: border-box;
+
+
+}
+
+@-webkit-keyframes sdb {
+    0% {
+        -webkit-transform: rotate(-135deg) translate(0, 0);
+    }
+
+    20% {
+        -webkit-transform: rotate(-135deg) translate(-5px, 5px);
+    }
+
+    40% {
+        -webkit-transform: rotate(-135deg) translate(0, 0);
+    }
+}
+
+@keyframes sdb {
+    0% {
+        transform: rotate(-135deg) translate(0, 0);
+    }
+
+    20% {
+        transform: rotate(-135deg) translate(-5px, 5px);
+    }
+
+    40% {
+        transform: rotate(-135deg) translate(0, 0);
+    }
+}
 }
 
 .flip-animation {
     position: relative;
     width: 300px;
-    float: left;
-    -webkit-perspective: 500;
-    -moz-perspective: 500;
-    -ms-perspective: 500;
-    perspective: 500;
-    -webkit-perspective-origin: left;
-    -moz-perspective-origin: left;
-    -ms-perspective-origin: left;
-    perspective-origin: left;
+    float: right;
 }
 
-#content2 .flip-animation .caption {
+.flip-animation .caption {
+
     position: absolute;
-    padding: 20px;
-    background-color: #FF9838;
-    height: 185px;
-    width: 100px;
-    opacity: 0;
-    -webkit-transform: rotateY(-90deg);
-    -ms-transform: rotateY(-90deg);
-    -o-transform: rotateY(-90deg);
-    transform: rotateY(-90deg);
-    -webkit-transition: transform 0.4s, opacity 0.1s 0.3s;
-    -o-transition: transform 0.4s, opacity 0.1s 0.3s;
-    transition: transform 0.4s, opacity 0.1s 0.3s;
-    -webkit-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
-    -ms-transform-origin: 0 0;
-    -o-transform-origin: 0 0;
-    transform-origin: 0 0;
+    top: 80px;
+    right: 0;
+
+
+
+    width: 300px;
+    height: 225px;
+    background: rgb(30, 13, 97, 40%);
+    transform: translate3d(90%, 0%, 0);
+    transition: .3s;
 }
 
-#content2 .flip-animation .caption h2 {
+.flip-animation .caption h2 {
     color: white;
     font-size: 13px;
+    float: right;
+    border: clear;
+
+    widows: 255px;
 }
 
-#content2 .flip-animation .caption h3 {
+.flip-animation .caption h3 {
     color: white;
     font-size: 15px;
+    float: right;
+
+
+    margin-left: 200px;
 }
 
-#content2 .flip-animation:hover .caption {
-    opacity: 1;
-    -webkit-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-    -webkit-transition: transform 0.4s, opacity 0.1s;
-    -o-transition: transform 0.4s, opacity 0.1s;
-    transition: transform 0.4s, opacity 0.1s;
+.flip-animation:hover .caption {
+    transform: translate3d(0, 0, 0);
 }
 
-#content2 .flip-animation:hover img {
-    -webkit-transform: translateX(25%);
-    -ms-transform: translateX(25%);
-    -o-transform: translateX(25%);
-    transform: translateX(25%);
-    -webkit-transition: transform 0.4s;
-    -o-transition: transform 0.4s;
-    transition: transform 0.4s;
+.flip-animation .caption a {
+
+    padding-top: 60px;
+
 }
+
+.flip-animation a span {
+    position: absolute;
+    top: 43%;
+    right: 90%;
+    width: 15px;
+    height: 15px;
+    margin-left: -12px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-animation: sdb 2s infinite;
+    animation: sda 2s infinite;
+    box-sizing: border-box;
+
+
+}
+
+@-webkit-keyframes sda {
+    0% {
+        -webkit-transform: rotate(45deg) translate(0, 0);
+    }
+
+    20% {
+        -webkit-transform: rotate(45deg) translate(-5px, 5px);
+    }
+
+    40% {
+        -webkit-transform: rotate(45deg) translate(0, 0);
+    }
+}
+
+@keyframes sda {
+    0% {
+        transform: rotate(45deg) translate(0, 0);
+    }
+
+    20% {
+        transform: rotate(45deg) translate(-5px, 5px);
+    }
+
+    40% {
+        transform: rotate(45deg) translate(0, 0);
+    }
+}
+}
+
+.aflip-animation {
+    position: relative;
+    width: 300px;
+    float: right;
+}
+
+.aflip-animation .caption {
+
+    position: absolute;
+    top: 80px;
+    right: 0;
+
+
+
+    width: 300px;
+    height: 200px;
+    background: rgb(30, 13, 97, 40%);
+    transform: translate3d(90%, 0%, 0);
+    transition: .3s;
+}
+
+.aflip-animation .caption h2 {
+    color: white;
+    font-size: 13px;
+    float: right;
+    border: clear;
+
+    widows: 255px;
+}
+
+.aflip-animation .caption h3 {
+    color: white;
+    font-size: 15px;
+    float: right;
+
+
+    margin-left: 100px;
+}
+
+.aflip-animation:hover .caption {
+    transform: translate3d(0, 0, 0);
+}
+
+.aflip-animation .caption a {
+
+    padding-top: 60px;
+
+}
+
+.aflip-animation a span {
+    position: absolute;
+    top: 43%;
+    right: 90%;
+    width: 15px;
+    height: 15px;
+    margin-left: -12px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-animation: sdb 2s infinite;
+    animation: sda 2s infinite;
+    box-sizing: border-box;
+
+
+}
+
+@-webkit-keyframes sda {
+    0% {
+        -webkit-transform: rotate(45deg) translate(0, 0);
+    }
+
+    20% {
+        -webkit-transform: rotate(45deg) translate(-5px, 5px);
+    }
+
+    40% {
+        -webkit-transform: rotate(45deg) translate(0, 0);
+    }
+}
+
+@keyframes sda {
+    0% {
+        transform: rotate(45deg) translate(0, 0);
+    }
+
+    20% {
+        transform: rotate(45deg) translate(-5px, 5px);
+    }
+
+    40% {
+        transform: rotate(45deg) translate(0, 0);
+    }
+}
+}
+
 
 slide-animation {
     position: relative;
@@ -225,23 +414,127 @@ nav a {
 }
 
 nav a:hover {
-    border-bottom: 3px solid #1E0D61;
+    border-bottom: 3px solid #FF9838;
 }
 
 nav li {
     list-style-type: none;
     float: left;
-    margin-top: 2px;
+    margin-top: 7px;
 }
 
 .main-visual {
     width: 100%;
-    height: 550px;
-    background: #fff url(../sozai/info-hero.jpg)0 0 no-repeat;
+    height: 700px;
+    background: #fff url(../sozai/info-hero.png)0 0 no-repeat;
     background-size: cover;
-    margin-bottom: 32px;
+    margin-bottom: 0px;
     position: relative;
     text-align: center;
+}
+
+.alit {
+    left: 50%;
+    display: inline-block;
+}
+
+.lit {
+
+    color: #fff;
+    font-size: 70px;
+    margin-top: 300px;
+    text-align: center;
+
+    display: block;
+
+}
+
+.lit1 {
+
+    color: #fff;
+    font-size: 30px;
+    margin-top: 120px;
+
+    display: block;
+
+}
+
+.main-visual a {
+
+    padding-top: 60px;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-decoration: none;
+}
+
+.main-visual a span {
+    position: absolute;
+    top: 100px;
+    left: -135px;
+    width: 40px;
+    height: 40px;
+    margin-left: -12px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb 2s infinite;
+    animation: sdc 2s infinite;
+    box-sizing: border-box;
+}
+
+@-webkit-keyframes sdc {
+    0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+    }
+
+    20% {
+        -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+    }
+
+    40% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+    }
+}
+
+@keyframes sdc {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+
+    20% {
+        transform: rotate(-45deg) translate(-10px, 10px);
+    }
+
+    40% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+}
+
+
+.sukima {
+    height: 55px;
+    border-color: rgb(25, 25, 25);
+    width: 100%;
+    overflow: hidden;
+    background: rgb(25, 25, 25);
+    padding: 6px 0px;
+    z-index: 2;
+
+}
+
+.aida {
+    height: 55px;
+    border-color: #f2f2f2;
+    width: 100%;
+    overflow: hidden;
+    background: #f2f2f2;
+    padding: 6px 0px;
+    z-index: 2;
 }
 
 /*a.topbtn {
@@ -272,6 +565,8 @@ a.fbbtn {
     display: inline-block;
     float: right;
     margin-right: 56px;
+    margin-bottom: 20px;
+    margin-top: 4px;
 
 
 }
@@ -351,6 +646,8 @@ a.instabtn {
     display: inline-block;
     float: right;
     margin-right: 56px;
+    margin-bottom: 20px;
+    margin-top: 4px;
 
 
 }
@@ -430,6 +727,8 @@ a.twbtn {
     display: inline-block;
     float: right;
     margin-right: 70px;
+    margin-bottom: 20px;
+    margin-top: 4px;
 
 
 }
@@ -498,16 +797,7 @@ a.twbtn:hover .edge {
 }
 
 
-.lit {
-    position: absolute;
-    color: #fff;
-    font-size: 70px;
-    top: 250px;
-    left: 600px;
-    text-align: center;
-    margin: 0 auto;
 
-}
 
 .wrapper {
     width: 980px;
@@ -529,23 +819,29 @@ a.twbtn:hover .edge {
     color: #1E0D61;
     font-weight: 400;
     border-left: 6px solid #FF9838;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto',
+        sans-serif;
 }
 
 .top-title1 {
     font: 36px;
-    padding-left: 8px;
+    padding-right: 8px;
     margin-bottom: 16px;
     color: #1E0D61;
     font-weight: 400;
-    border-left: 6px solid #FF9838;
+    border-right: 6px solid #FF9838;
     float: right;
     font-family: 'Sawarabi Mincho', sans-serif;
 }
 
 img {
     float: left;
-    margin-right: 10px;
+
+}
+
+.rightimg {
+    float: right;
+    right: 0;
 }
 
 .seikeiteam img {
@@ -614,6 +910,7 @@ a.fbbutton:hover {
     position: relative;
     overflow: hidden;
     display: inline-block;
+    margin-bottom: 20px;
 }
 
 #main a.fbbutton:active {
@@ -687,6 +984,7 @@ a.fbbutton:hover .edge {
 p {
 
     margin-bottom: 16px;
+    margin-top: 16px;
 
 }
 
@@ -751,7 +1049,10 @@ p.new1 {
 
 
 .fbimg {
-    margin-left: 65px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 
