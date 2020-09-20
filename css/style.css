@@ -34,7 +34,7 @@ body {
 
     position: fixed;
     z-index: 2;
-    background-image: url(../sozai/headergackgrounding.png);
+    background-image: url(../images/headergackgrounding.png);
 
     height: 66px;
 }
@@ -426,7 +426,7 @@ nav li {
 .main-visual {
     width: 100%;
     height: 700px;
-    background: #fff url(../sozai/info-hero.png)0 0 no-repeat;
+    background: #fff url(../images/info-hero.png)0 0 no-repeat;
     background-size: cover;
     margin-bottom: 0px;
     position: relative;
